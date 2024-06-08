@@ -111,13 +111,27 @@ ul a:hover{
     display: block;
 }
 .img{
+
     height: 100%;
     width: 100%;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
 }
 .img img{
+  border-radius: 10px;
     width: 30%;
-    
 }
+.img1{
+
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  display: flex;
+}
+.img1 img{
+  border-radius: 10px;
+  width: 30%;
+}
+

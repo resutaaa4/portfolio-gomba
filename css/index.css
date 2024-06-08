@@ -6,7 +6,7 @@
 }
 body::before{
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -30,7 +30,6 @@ body{
     height: 100vh;
     opacity: 0;
     animation: fadeInAnimation 0.8s ease-in forwards;
-    
     
 }
 .logo{
@@ -60,13 +59,13 @@ header{
 header a{
     text-decoration: none;
     color: orange;
-
+    margin-left: 20px;
 }
 ul{
     display: flex;
     gap: 50px;
     margin-right: 20px;
-    
+    list-style: none;
 }
 ul a{
     display: flex;

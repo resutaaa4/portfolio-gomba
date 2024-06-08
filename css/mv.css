@@ -6,11 +6,11 @@
 }
 body::before{
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: -1;
 }
@@ -27,10 +27,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10% 75%;
-    min-height: 100vh;
+    height: 100vh;
     opacity: 0;
     animation: fadeInAnimation 0.8s ease-in forwards;
-    
     
     
 }
@@ -61,13 +60,13 @@ header{
 header a{
     text-decoration: none;
     color: orange;
-
+    margin-left: 20px;
 }
 ul{
     display: flex;
     gap: 50px;
     margin-right: 20px;
-    
+    list-style: none;
 }
 ul a{
     display: flex;
@@ -112,54 +111,38 @@ ul a:hover{
 }
   
 
-.teks{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-p{
-
-    font-size: 33px;
-    color: white;
+.flukes{
     text-align: center;
-    width: 70%;
-    align-self: center;
-    justify-content: center;
-}
-.tiks{
-    color: orange;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-}
-.tiks h1{
+    font-size: 1.7rem;
     justify-content: center;
     display: flex;
+    align-items: center ;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: row;
+    height: 70vh;
 }
-.images a i {
-    background-color: black; 
-    border-radius: 10px; 
-    padding: 10px; 
-    color: orange; 
-    transition: background-color 0.4s;
-    margin: 0;
+.misyon{
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px;
 }
-.images{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    font-size: 30px;
-    border-radius: 50px ;
+.bisyon{
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px;
 }
-.images a{
-    text-decoration: underline transparent;
-    color:orange;
-    transition: all 0.4s;
-
+.misyon h1{
    
+    color: orange;
 }
-.images a:hover{
-    text-decoration: underline;
-    transform: scale(1.2);
-
+.misyon p{
+    color: white;
+  
+}
+.bisyon h1{
+    color: orange;
+}
+.bisyon p{
+    color: white;
 }
