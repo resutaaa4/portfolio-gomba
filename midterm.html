@@ -18,6 +18,7 @@
 </head>
 <body>
   
+    
     <header>
         <a href="index.html" class="logo">PORTFOLIO</a>
 
@@ -27,17 +28,56 @@
             <div class="dropdown">
                 <button class="dropbtn">Activities <i class="ri-arrow-down-s-fill"></i></button>
                 <div class="dropdown2">
-                  <a href="prelim.html">Prelim</a>
-                  <a href="midterm.html">Midterm</a>
-                  <a href="finals.html">Finals</a>
+                    <a href="prelim.html">Prelim</a>
+                    <a href="midterm.html">Midterm</a>
+                    <a href="finals.html">Finals</a>
                 </div>
-              </div>
+            </div>
         </ul>
     </header>
-    <div class="img">
-        <img src="actimg/midterm1.png" alt="">
-        <img src="actimg/midterm2.png" alt="">
-        <img src="actimg/midterm3.png" alt="">
+
+    <div class="slideshow-container">
+        <div class="slides active">
+            <img src="actimg/midterm1.png" alt="Slide 1">
+        </div>
+
+        <div class="slides">
+            <img src="actimg/midterm2.png" alt="Slide 2">
+        </div>
+
+        <div class="slides">
+            <img src="actimg/midterm3.png" alt="Slide 3">
+        </div>
+
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-    </body>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides(index) {
+            let slides = document.getElementsByClassName("slides");
+            if (index >= slides.length) {
+                slideIndex = 0;
+            }
+            if (index < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "flex";
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlides(slideIndex);
+        });
+    </script>
+         </body>
     </html>
